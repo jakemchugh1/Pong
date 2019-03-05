@@ -63,8 +63,8 @@ public class PongWindow {
             playerTwo.checkCollision(ball);
 
             ball.update();
-            playerOne.update(ball.getPos());
-            playerTwo.update(ball.getPos());
+            playerOne.update(ball);
+            playerTwo.update(ball);
             score.setScore(ball.getLeft(),ball.getRight());
 
 

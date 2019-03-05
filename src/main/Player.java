@@ -33,11 +33,11 @@ public class Player {
 
 
     }
-    public void update(Vector2f ball){
+    public void update(Ball ball){
         if(real)pos.y = 480- Mouse.getY();
         else{
-            if(pos.y < ball.y+5) pos.y = pos.y + 1f;
-            else if(pos.y > ball.y-5) pos.y = pos.y - .9f;
+            if(pos.y < ball.getPos().y+5 && ball.getMovement().x < 0) pos.y = pos.y + 0.7f*ball.getSpeed();
+            else if(pos.y > ball.getPos().y-5 && ball.getMovement().x < 0) pos.y = pos.y - 0.7f*ball.getSpeed();
         }
     }
 

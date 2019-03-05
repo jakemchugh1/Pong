@@ -52,15 +52,15 @@ public class Ball {
             pos.x = 320;
             pos.y = 240;
             resetMovement();
-            printScore();
-            left++;
+            right++;
+            speed = speed + 0.2f;
         }
         if(pos.x > 640){
             pos.x = 320;
             pos.y = 240;
             resetMovement();
-            right++;
-            printScore();
+            left++;
+            speed = speed + 0.2f;
         }
     }
 
